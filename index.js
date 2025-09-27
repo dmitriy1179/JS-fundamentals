@@ -33,13 +33,27 @@ do {
 let files = Math.floor(memory * 1024 / 820);
 alert(`The flash drive can hold ${files} files`)
 
-
 //2.4
+let num = prompt("enter a number");
+let res = 0;
+if (Number.isNaN(+num) || Number.isNaN(parseInt(num))) {
+  alert("You entered an incorrect number");
+}
+else {
+  while (+num >= 1) {
+    const digit = +num % 10;
+    num = Math.floor(+num / 10);
+    res = res * 10 + digit;
+    console.log("res", res)
+  }
+}
+
+//2.5
 let amount;
 do {
   const response = prompt("enter the deposit amount");
   amount = +response && parseInt(response);
-} while(!amount);
+} while (!amount);
 const percent = 5;
 const month = 2;
 const result = (amount * (percent / 12 * month / 100)).toFixed(2);
