@@ -59,3 +59,8 @@ const month = 2;
 const result = (amount * (percent / 12 * month / 100)).toFixed(2);
 const [grn, kop] = result.split(".");
 alert(`${grn} grn ${kop} kop`);
+
+//2.6
+console.log("return 0", 2 && 0 && 3)
+console.log("return 2", 2 || 0 || 3)
+console.log("return 3", 2 && 0 || 3)
